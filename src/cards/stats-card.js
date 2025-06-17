@@ -49,7 +49,7 @@ const createTextNode = ({
 }) => {
   const kValue =
     number_format.toLowerCase() === "long" ? value : kFormatter(value);
-  const staggerDelay = (index + 3) * 150;
+  const staggerDelay = (index + 3) * 180;
 
   const labelOffset = showIcons ? `x="25"` : "";
   const iconSvg = showIcons
