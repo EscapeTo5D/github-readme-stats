@@ -49,7 +49,7 @@ const createTextNode = ({
 }) => {
   const kValue =
     number_format.toLowerCase() === "long" ? value : kFormatter(value);
-  const staggerDelay = (index + 3) * 180;
+  const staggerDelay = (index + 3) * 150;
 
   const labelOffset = showIcons ? `x="25"` : "";
   const iconSvg = showIcons
@@ -150,7 +150,8 @@ const getStyles = ({
     }
     .rank-text {
       font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${textColor};
-      animation: scaleInAnimation 0.3s ease-in-out forwards;
+      animation: scaleInAnimation 0.5s ease-in-out forwards;
+      animation-delay: 0ms;
     }
     .rank-percentile-header {
       font-size: 14px;
@@ -171,6 +172,7 @@ const getStyles = ({
       fill: none;
       stroke-width: 6;
       opacity: 0.2;
+      animation-delay: 0ms;
     }
     .rank-circle {
       stroke: ${ringColor};
@@ -182,6 +184,7 @@ const getStyles = ({
       transform-origin: -10px 8px;
       transform: rotate(-90deg);
       animation: rankAnimation 1s forwards ease-in-out;
+      animation-delay: 0ms;
     }
     ${process.env.NODE_ENV === "test" ? "" : getProgressAnimation({ progress })}
   `;
