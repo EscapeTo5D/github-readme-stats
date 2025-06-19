@@ -852,9 +852,11 @@ const renderTopLanguages = (topLangs, options = {}) => {
     }
     #rect-mask rect{
       animation: slideInAnimation 1s ease-in-out forwards;
+      animation-delay: 0s;
     }
     .lang-progress{
       animation: growWidthAnimation 0.6s ease-in-out forwards;
+      animation-delay: 0s;
     }
     `,
   );
